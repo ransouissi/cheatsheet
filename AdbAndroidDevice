@@ -1,0 +1,50 @@
+#List the connected devices: 
+        adb devices
+        
+#Server Kill/Start
+        adb kill-server 
+        adb start-server
+        
+#Initiate a shell 
+        adb shell
+        adb -s emulator-5554 shell // in case of more than 1 device is listed 
+        
+#Reboot the device       
+        adb reboot
+        adb reboot recovery 
+        adb reboot-bootloader
+
+#Restart adb with root permissions
+        adb root 
+
+#commands for packages 
+        adb uninstall [package_name]
+        
+#Copy a file/directory from the device: 
+        adb pull [path_to_the_remote_object] [path_to_the_local_destination]
+
+#Push a file/directory to a device: 
+        adb push [path_to_the_local_destination] [path_to_the_remote_object] 
+       
+#Install an application: 
+        adb install <path_to_the_APK_file> 
+        
+#Uninstalling app from device
+        adb uninstall com.myAppPackage
+        adb uninstall <app .apk name>
+        adb uninstall -k <app .apk name> -> 
+                      
+                      -k:       Uninstall .apk withour deleting data"
+== Activity Manager
+$ adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp' 
+adb shell am start -a android.intent.action.VIEW
+                  
+#List packages
+adb shell pm list packages
+
+#Uninstall package
+adb shell pm uninstall com.example.App_Name
+
+
+
+
