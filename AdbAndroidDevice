@@ -32,7 +32,14 @@
 #Uninstalling app from device
         adb uninstall com.myAppPackage
         adb uninstall <app .apk name>
-        adb uninstall -k <app .apk name> -> 
+        adb uninstall -k <app .apk name> 
+ 
+#Logcat 
+        adb logcat 
+
+#Get information about system services
+         adb shell dumpsys [-t timeout] [--help | -l | --skip services | service [arguments] | -c | -h]
+
                       
                       -k:       Uninstall .apk withour deleting data"
 == Activity Manager
