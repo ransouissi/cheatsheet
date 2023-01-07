@@ -33,7 +33,7 @@
         adb uninstall com.myAppPackage
         adb uninstall <app .apk name>
         adb uninstall -k <app .apk name> 
- 
+                      -k:       Uninstall .apk withour deleting data"
 #Logcat 
         adb logcat 
 
@@ -41,7 +41,6 @@
          adb shell dumpsys [-t timeout] [--help | -l | --skip services | service [arguments] | -c | -h]
 
                       
-                      -k:       Uninstall .apk withour deleting data"
 == Activity Manager
 $ adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp' 
 adb shell am start -a android.intent.action.VIEW
