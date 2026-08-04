@@ -1,0 +1,39 @@
+** Verify Docker Version 
+  docker -v
+
+** Create a container 
+  docker run container_name
+
+** List containers 
+  docker ps
+  OR
+  docker container ps
+
+** List all the currently running docker containers 
+  docker ps -a 
+  OR
+  docker container ps -a
+
+** List all containers that are currently available on te system 
+  docker ls -a
+
+** List all images installed on the system 
+  docker image ls
+  OR 
+  docker images
+
+** Delete 1 or more Containers
+  1. docker ps -a 
+  2. docker rm container_id OR docker container rm container_id
+  3. docker ps -a
+
+
+** Delete image 
+  1. docker image ls 
+  2. docker image rm container_id OR docker rmi image_id
+
+  
+  
+
+
+
