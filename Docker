@@ -49,6 +49,23 @@
 
 ** Re-launch and interact with teh container in one line command
   docker start -ai image_id
+
+** Mapped Volume
+  docker run -it --rm local_folder:container_folder image_name
+
+** Managed Volume
+  Create Volume 
+    docker volume create volume_name
+  List volume
+    docker volume ls
+  Delete Volume
+    docker volume rm volume_name
+  Link a Managed volume
+    docker run -it --rm volume_name:container_folder image_name
+  Volume Infos
+    docker volume inspect volume_name
+
+  
   
   
 
