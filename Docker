@@ -24,7 +24,7 @@
 
 ** Delete 1 or more Containers
   1. docker ps -a 
-  2. docker rm container_id OR docker container rm container_id
+  2. docker rm image_id OR docker container rm image_id
   3. docker ps -a
 
 
@@ -32,6 +32,23 @@
   1. docker image ls 
   2. docker image rm container_id OR docker rmi image_id
 
+** Run a container and interact with it 
+  docker run -it image_id
+
+** Launch a container and delete automatically 
+  docker run -it --rm image_id
+
+** Re-Run a container
+  docker start image_id
+
+** Stop a container
+  docker stop image_id
+
+** Acces the container and work on it (already started)
+  docker exec -it image_id bash 
+
+** Re-launch and interact with teh container in one line command
+  docker start -ai image_id
   
   
 
