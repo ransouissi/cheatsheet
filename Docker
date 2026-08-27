@@ -74,7 +74,8 @@
 Volume Infos
           docker volume inspect volume_name
 
-  
+
+A Dockerfile builds a single container image, while a docker-compose.yml file configures and runs multiple interconnected containers as a cohesive system.
   
   
 
