@@ -51,19 +51,28 @@
   docker start -ai image_id
 
 ** Mapped Volume
-  docker run -it --rm local_folder:container_folder image_name
+  Definition: 
+        Mapped volumes link a explicit directory or file on your host machine directly to a directory inside the container. 
+        If you modify a file on your host, the change instantly reflects inside the container, and vice versa
+  Command:
+        docker run -it --rm local_folder:container_folder image_name
 
 ** Managed Volume
-  Create Volume 
-    docker volume create volume_name
-  List volume
-    docker volume ls
-  Delete Volume
-    docker volume rm volume_name
-  Link a Managed volume
-    docker run -it --rm volume_name:container_folder image_name
-  Volume Infos
-    docker volume inspect volume_name
+  Definition:
+        Managed volumes are created and handled entirely by the Docker engine. 
+        Docker creates a dedicated directory inside its own internal storage pool and abstractly maps it to your container.
+  Commands: 
+        Create Volume 
+          docker volume create volume_name
+        List volume
+          docker volume ls
+        Delete Volume
+          docker volume rm volume_name
+        Link a Managed volume
+          docker run -it --rm volume_name:container_folder image_name
+        
+Volume Infos
+          docker volume inspect volume_name
 
   
   
